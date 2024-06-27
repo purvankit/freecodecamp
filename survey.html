@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>F1 Survey Form</title>
+    <link rel="stylesheet" href="surveystyles.css">
+</head>
+<body>
+    <div class="banner">
+        <h1 id="title">F1 Survey Form</h1>
+        <p id="description">Share your love of F1!</p>
+    </div>
+    <form method="post" id="survey-form">
+        <fieldset>
+            <legend><h2>Personal Information</h2></legend>
+            <label id="name-label" for="name"><b>Enter Your Name:</b>
+                <input id="name" name="name" type="text" required placeholder="Name">
+            </label>
+            <label id="email-label" for="email"><b>Enter Your E-mail:</b>
+                <input id="email" name="email" type="email" required placeholder="E-mail">
+            </label>
+            <label id="number-label" for="number"><b>Enter Your Phone Number:</b>
+                <input id="number" name="number" type="number" min-length="10" max-length="12" placeholder="Number" required>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend><h2>Favorites</h2></legend>
+            <label for="cars"><b>Which is your favorite F1 team?</b>
+                <select id="dropdown" name="cars" id="cars">
+                    <option value="" disabled selected>Select your team</option>
+                    <option value="1">Mercedes</option>
+                    <option value="2">Ferrari</option>
+                    <option value="3">Redbull</option>
+                    <option value="4">McLaren</option>
+                    <option value="5">Alpine</option>
+                    <option value="6">Williams</option>
+                    <option value="7">VCarb</option>
+                    <option value="8">Sauber</option>
+                    <option value="9">Aston Martin</option>
+                    <option value="10">Haas</option>
+                </select>
+            </label>
+            <label for="activity"><b>What is your preferred race day activity?</b>
+                <select name="activity" id="activity">
+                    <option value="" disabled selected>Select activity</option>
+                    <option value="1">Watching with Friends</option>
+                    <option value="2">Watching alone</option>
+                    <option value="3">Attending fan events</option>
+                    <option value="4">Betting on races</option>
+                </select>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>What's Your Favorite Grand Prix</legend>
+            <label for="Monaco">
+                <input type="checkbox" id="Monaco" class="inline"  name="grandprix" value="Monaco"> Monaco Grand Prix
+            </label>
+            <label for="British">
+                <input type="checkbox" id="British" class="inline"  name="grandprix" value="British"> British Grand Prix (Silverstone)
+            </label>
+            <label for="Belgian">
+                <input type="checkbox" id="Belgian" class="inline"  name="grandprix" value="Belgian"> Belgian Grand Prix (Spa-Francorchamps)
+            </label>
+            <label for="Italian">
+                <input type="checkbox" id="Italian" class="inline"  name="grandprix" value="Italian"> Italian Grand Prix (Monza)
+            </label>
+            <label for="Austin">
+                <input type="checkbox" id="Austin" class="inline"  name="grandprix" value="Austin"> United States Grand Prix (Austin)
+            </label>
+            <label for="Suzuka">
+                <input type="checkbox" id="Suzuka" class="inline"  name="grandprix" value="Suzuka"> Japanese Grand Prix (Suzuka)
+            </label>
+            <label for="Melbourne">
+                <input type="checkbox" id="Melbourne" class="inline"  name="grandprix" value="Melbourne"> Australian Grand Prix (Melbourne)
+            </label>
+            <label for="Interlagos">
+                <input type="checkbox" id="Interlagos" class="inline"  name="grandprix" value="Interlagos"> Brazilian Grand Prix (Interlagos)
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend><h2>Event Participation</h2></legend>
+            <div class="races">
+                <legend><b>Have you attended any races?</b></legend>
+                <label for="yes"><input id="yes" type="radio" name="attended" class="inline" value="yes" checked> Yes</label>
+                <label for="no"><input id="no" type="radio" name="attended" class="inline" value="no"> No</label>
+            </div>
+            <div class="circuits">
+                <legend><b>What circuits do you prefer?</b></legend>
+                <label for="street"><input id="street" type="radio" name="circuits" class="inline" value="street" checked> Street Circuits</label>
+                <label for="permanent"><input id="permanent" type="radio" name="circuits" value="permanent" class="inline"> Permanent Circuits</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend><h2>Additional Comments</h2></legend>
+            <label for="bio"><b>What Got You Into F1?</b><br><br>
+                <textarea id="bio" name="bio" rows="6" placeholder="I like cars going vroom..."></textarea>
+            </label>
+        </fieldset>
+        <input type="submit" value="Submit" id="submit" class="submit">
+    </form>
+</body>
+</html>
